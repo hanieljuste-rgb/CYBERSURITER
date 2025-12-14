@@ -1,0 +1,21 @@
+
+Exception occurred while executing 'list':
+java.lang.SecurityException: Shell does not have permission to access user 999
+ com.android.server.am.ActivityManagerService.handleIncomingUser:14398 android.app.ActivityManager.handleIncomingUser:4927 com.android.server.pm.PackageManagerShellCommand.translateUserId:3783 
+	at com.android.server.am.UserController.handleIncomingUser(UserController.java:2566)
+	at com.android.server.am.ActivityManagerService.handleIncomingUser(ActivityManagerService.java:14398)
+	at android.app.ActivityManager.handleIncomingUser(ActivityManager.java:4927)
+	at com.android.server.pm.PackageManagerShellCommand.translateUserId(PackageManagerShellCommand.java:3783)
+	at com.android.server.pm.PackageManagerShellCommand.runListPackages(PackageManagerShellCommand.java:1056)
+	at com.android.server.pm.PackageManagerShellCommand.runListPackages(PackageManagerShellCommand.java:952)
+	at com.android.server.pm.PackageManagerShellCommand.runList(PackageManagerShellCommand.java:792)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:240)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.onShellCommand(PackageManagerService.java:6723)
+	at android.os.Binder.shellCommand(Binder.java:1068)
+	at android.os.Binder.onTransact(Binder.java:888)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:4836)
+	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.onTransact(PackageManagerService.java:6707)
+	at android.os.Binder.execTransactInternal(Binder.java:1344)
+	at android.os.Binder.execTransact(Binder.java:1275)

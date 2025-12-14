@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok - Connexion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo svg {
+            width: 120px;
+            height: 40px;
+        }
+        
+        .logo-text {
+            font-size: 42px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #25F4EE, #FE2C55);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .warning-banner {
+            background: #ff4444;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .warning-banner span {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #FE2C55;
+        }
+        
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #FE2C55;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn-login:hover {
+            background: #e0264d;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            color: #999;
+            position: relative;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #ddd;
+        }
+        
+        .divider::before { left: 0; }
+        .divider::after { right: 0; }
+        
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .social-btn:hover {
+            background: #f5f5f5;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #FE2C55;
+            text-decoration: none;
+        }
+        
+        /* Style pour montrer les données capturées */
+        #captured-data {
+            display: none;
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        #captured-data.show {
+            display: block;
+        }
+        
+        .education-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .education-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .education-box ul {
+            color: #856404;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warning-banner">
+            ⚠️ CECI EST UNE DÉMO ÉDUCATIVE ⚠️
+            <span>Cette page simule une attaque phishing - NE JAMAIS utiliser sur des victimes réelles</span>
+        </div>
+        
+        <div class="logo">
+            <span class="logo-text">TikTok</span>
+        </div>
+        
+        <h2>Connexion</h2>
+        
+        <form id="phishing-form">
+            <div class="form-group">
+                <label>Email ou nom d'utilisateur</label>
+                <input type="text" id="username" placeholder="Email ou nom d'utilisateur" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Mot de passe</label>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+            </div>
+            
+            <button type="submit" class="btn-login">Se connecter</button>
+        </form>
+        
+        <div class="divider">ou</div>
+        
+        <div class="social-login">
+            <button class="social-btn" onclick="captureClick('Google')">
+                <span>🔵</span> Continuer avec Google
+            </button>
+            <button class="social-btn" onclick="captureClick('Facebook')">
+                <span>🔷</span> Continuer avec Facebook
+            </button>
+            <button class="social-btn" onclick="captureClick('Apple')">
+                <span>🍎</span> Continuer avec Apple
+            </button>
+        </div>
+        
+        <div class="footer">
+            <p>Pas encore de compte ? <a href="#">S'inscrire</a></p>
+        </div>
+        
+        <!-- Zone d'affichage des données capturées (éducatif) -->
+        <div id="captured-data"></div>
+        
+        <div class="education-box">
+            <h4>🎓 Ce que les hackers font avec ces données :</h4>
+            <ul>
+                <li>Stockent email + mot de passe dans une base de données</li>
+                <li>Testent les mêmes identifiants sur d'autres sites</li>
+                <li>Vendent les données sur le dark web</li>
+                <li>Utilisent le compte pour arnaquer vos contacts</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Simulation de capture de données (éducatif uniquement)
+        document.getElementById('phishing-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const timestamp = new Date().toISOString();
+            const userAgent = navigator.userAgent;
+            
+            // Afficher ce qu'un vrai phishing capturerait
+            const capturedDiv = document.getElementById('captured-data');
+            capturedDiv.innerHTML = `
+<strong>🚨 DONNÉES CAPTURÉES (SIMULATION) 🚨</strong>
+
+Timestamp: ${timestamp}
+IP: [Serait capturée par le serveur]
+User-Agent: ${userAgent}
+
+═══════════════════════════════════════
+IDENTIFIANTS VOLÉS:
+───────────────────────────────────────
+Email/Username: ${username}
+Mot de passe: ${password}
+═══════════════════════════════════════
+
+⚠️ Dans un vrai phishing, ces données 
+seraient envoyées au serveur du hacker!
+
+Le hacker pourrait maintenant:
+1. Se connecter à votre TikTok
+2. Changer votre mot de passe
+3. Tester sur Gmail, Facebook, Instagram...
+4. Vous bloquer de votre propre compte
+            `;
+            capturedDiv.classList.add('show');
+            
+            // Log dans la console (pour démonstration)
+            console.log('=== PHISHING DEMO - DONNÉES CAPTURÉES ===');
+            console.log('Username:', username);
+            console.log('Password:', password);
+            console.log('Timestamp:', timestamp);
+            console.log('User-Agent:', userAgent);
+        });
+        
+        function captureClick(provider) {
+            alert(`🚨 SIMULATION: Le hacker saurait que vous avez cliqué sur "${provider}"\n\nDans un vrai phishing, vous seriez redirigé vers une fausse page ${provider} pour voler ces identifiants aussi!`);
+        }
+    </script>
+</body>
+</html>

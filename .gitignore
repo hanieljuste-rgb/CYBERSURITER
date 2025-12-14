@@ -1,0 +1,78 @@
+# ================================
+# DONNÉES PERSONNELLES - NE PAS POUSSER
+# ================================
+
+# Données extraites du téléphone
+02_EXTRACTION_DONNEES/
+DONNEES_VOLEES/
+DONNEES_LIEN/
+contacts_extraits.txt
+
+# Données spécifiques téléphone
+**/DataExtract*/
+**/DonneesVolees/
+**/ExtractedData/
+**/SPYWARE_DATA/
+**/TECNO_CK6/
+**/MonitorData/
+
+# WhatsApp et médias personnels
+WhatsApp_Backup/
+**/WhatsApp/
+**/Photos/
+**/Videos/
+**/Audio/
+**/Documents/
+**/Screenshots/
+**/Media/
+
+# Backups téléphone
+06_BACKUPS_TELEPHONES/
+
+# Fichiers de config sensibles
+**/target_device.txt
+**/wifi_passwords.txt
+**/wifi_dump.txt
+**/*passwords*
+**/*credentials*
+**/*secrets*
+**/comptes.txt
+**/localisation.txt
+**/notifications.txt
+**/system_info.json
+
+# Contacts, SMS, Appels
+**/contacts.txt
+**/sms.txt
+**/calls.txt
+**/emails.txt
+**/Contacts/
+**/SMS/
+**/Appels/
+**/Apps/
+
+# Logs et rapports personnels
+**/logs/
+*.log
+**/bt_security_report_*.txt
+
+# Fichiers temporaires
+*.tmp
+*.temp
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Mtkclient (sous-module séparé)
+mtkclient/
+
+# Fichiers de test
+**/test_bluejack.vcf
+
+# ================================
+# GARDER UNIQUEMENT LES OUTILS
+# ================================
+# Les scripts Python dans 08_HACKING_LAB seront poussés
+# Les guides .md seront poussés
+# TOOLKIT_CENTRAL.py sera poussé

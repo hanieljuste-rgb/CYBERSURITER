@@ -1,0 +1,2 @@
+Scan effectué le 2025-12-06 06:39:03.553722
+Ports ouverts: [(135, 'RPC'), (445, 'SMB')]
