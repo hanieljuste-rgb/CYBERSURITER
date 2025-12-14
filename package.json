@@ -1,0 +1,21 @@
+{
+    "name": "cybersuiter",
+    "version": "2.0.0",
+    "description": "🔥 CYBERSUITER - Remote Phone Control Panel",
+    "main": "web_app.py",
+    "scripts": {
+        "start": "python web_app.py",
+        "dev": "python web_app.py"
+    },
+    "engines": {
+        "python": ">=3.9"
+    },
+    "keywords": [
+        "remote-control",
+        "adb",
+        "phone",
+        "dashboard"
+    ],
+    "author": "CYBERSUITER",
+    "license": "MIT"
+}
